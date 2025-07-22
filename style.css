@@ -1,0 +1,20 @@
+body {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically */
+  height: 100vh;           /* full viewport height */
+  margin: 0;               /* remove default margin */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    border: solid;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+}
