@@ -1,20 +1,111 @@
-body {
-  display: flex;
-  justify-content: center; /* centers horizontally */
-  align-items: center;     /* centers vertically */
-  height: 100vh;           /* full viewport height */
-  margin: 0;               /* remove default margin */
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.container{
-    border: solid;
-    height: 300px;
-    width: 300px;
-    margin: auto;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    max-width: 350px;
+    width: 100%;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.display {
+    margin-bottom: 20px;
+}
+
+.display input {
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 2.5em;
+    color: white;
+    text-align: right;
+    width: 100%;
+    min-height: 80px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.btn, .btn_clear, .btn_operator, .btn_equals, .btn_zero {
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn:hover, .btn_clear:hover, .btn_operator:hover, .btn_equals:hover, .btn_zero:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active, .btn_clear:active, .btn_operator:active, .btn_equals:active, .btn_zero:active {
+    transform: translateY(0);
+}
+
+.btn_operator {
+    background: rgba(255, 107, 107, 0.8);
+}
+
+.btn_operator:hover {
+    background: rgba(255, 107, 107, 0.9);
+}
+
+.btn_equals {
+    background: rgba(72, 187, 120, 0.8);
+    grid-column: span 2;
+}
+
+.btn_equals:hover {
+    background: rgba(72, 187, 120, 0.9);
+}
+
+.btn_clear {
+    background: rgba(245, 101, 101, 0.8);
+}
+
+.btn_clear:hover {
+    background: rgba(245, 101, 101, 0.9);
+}
+
+.btn_zero {
+    grid-column: span 2;
 }
